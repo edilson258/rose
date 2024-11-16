@@ -6,7 +6,7 @@ I'm building this just to help me understand the fundamentals graphics primitive
 
 ## Screenshots
 
-1. [Draw line](./examples/draw_line.c) [(Bresenham's line algorithm)]()
+1. [Draw line](./examples/draw_line.c) [(Bresenham's line algorithm)](https://youtu.be/CceepU1vIKo?si=SEfWOO-ldti5Dt6_)
 
 ![Line screenshot](./screenshots/line.png)
 
@@ -18,6 +18,17 @@ I'm building this just to help me understand the fundamentals graphics primitive
 
 ![Circle screenshot](./screenshots/circle.png)
 
-4. Checker pattern
+4. [Checker pattern](./examples/checker_pattern.c)
 
 ![Checker screenshot](./screenshots/checker-pattern.png)
+
+
+## Build and run examples
+
+```shell
+git clone https://github.com/edilson258/rose.git
+cd rose 
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
+cmake --build build
+./build/examples/draw_line out.ppm
+```
