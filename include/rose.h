@@ -16,8 +16,9 @@ struct rose_canvas
 };
 
 void rose_fill(struct rose_canvas *c, uint32_t color);
-void rose_fill_rect(struct rose_canvas *c, size_t rect_w, size_t rect_h, size_t x0, size_t y0, uint32_t color);
-void rose_fill_circle(struct rose_canvas *c, size_t cx, size_t cy, size_t r, uint32_t color);
+void rose_draw_line(struct rose_canvas *c, int x0, int y0, int x1, int y1);
+void rose_fill_rect(struct rose_canvas *c, int rect_w, int rect_h, int x0, int y0, uint32_t color);
+void rose_fill_circle(struct rose_canvas *c, int cx, int cy, int r, uint32_t color);
 int rose_dump_to_ppm(struct rose_canvas *c, const char *file_path);
 
 #endif
