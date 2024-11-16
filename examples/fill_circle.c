@@ -21,19 +21,10 @@ int main(int argc, char *argv[])
   // set background
   rose_fill(&canvas, 0xFF232623);
 
-  int tile_w = 100;
-  int tile_h = 100;
-
-  for (int y = 0; y < (int)(canvas.height / tile_h); ++y)
-  {
-    for (int x = 0; x < (int)(canvas.width / tile_w); ++x)
-    {
-      if ((y + x) % 2 == 0)
-      {
-        rose_fill_rect(&canvas, tile_w, tile_h, x * tile_w, y * tile_h, ROSE_COLOR_GREEN);
-      }
-    }
-  }
+  int circle_radius   = 200;
+  int circle_x_center = canvas.width / 2;
+  int circle_y_center = canvas.height / 2;
+  rose_fill_circle(&canvas, circle_x_center, circle_y_center, circle_radius, ROSE_COLOR_GREEN);
 
   int res = rose_dump_to_ppm(&canvas, argv[1]);
 

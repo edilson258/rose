@@ -21,10 +21,7 @@ int main(int argc, char *argv[])
   // set background
   rose_fill(&canvas, 0xFF232623);
 
-  size_t circle_radius   = 200;
-  size_t circle_x_center = canvas.width / 2;
-  size_t circle_y_center = canvas.height / 2;
-  rose_fill_circle(&canvas, circle_x_center, circle_y_center, circle_radius, ROSE_COLOR_GREEN);
+  rose_draw_line(&canvas, 50, 50, 250, 400);
 
   int res = rose_dump_to_ppm(&canvas, argv[1]);
 
