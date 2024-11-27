@@ -14,6 +14,5 @@ add_compile_options(-Wall -Wextra -Werror)
 
 file(GLOB rose_sources "src/*.c")
 add_library(rose STATIC ${rose_sources})
-target_link_libraries(rose m) # link with math lib.
 
 add_subdirectory(examples)

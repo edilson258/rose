@@ -1,5 +1,4 @@
 #include <errno.h>
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -74,7 +73,7 @@ void rose_fill_circle(struct rose_canvas *c, int cx, int cy, int r, uint32_t col
       {
         if (0 <= x && x < (int)c->width)
         {
-          if (sqrt((x - cx) * (x - cx) + (y - cy) * (y - (int)cy)) <= r)
+          if ((x - cx) * (x - cx) + (y - cy) * (y - cy) <= r * r)
           {
             c->pixels[y * c->width + x] = color;
           }
